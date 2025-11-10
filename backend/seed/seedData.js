@@ -2,7 +2,7 @@ const sampleProducts = [
   {
     name: 'Wireless Bluetooth Headphones',
     description: 'Premium noise-cancelling wireless headphones with 30-hour battery life and superior sound quality. Perfect for music lovers and professionals.',
-    price: 129.99,
+    price: 10799,
     image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop',
     category: 'Electronics',
     stock: 45,
@@ -10,7 +10,7 @@ const sampleProducts = [
   {
     name: 'Smart Watch Series 5',
     description: 'Advanced fitness tracking, heart rate monitor, GPS, and water-resistant design. Stay connected with notifications and apps.',
-    price: 299.99,
+    price: 24999,
     image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop',
     category: 'Electronics',
     stock: 30,
@@ -18,7 +18,7 @@ const sampleProducts = [
   {
     name: 'Laptop Pro 15"',
     description: 'High-performance laptop with Intel i7 processor, 16GB RAM, 512GB SSD. Perfect for professionals and content creators.',
-    price: 1299.99,
+    price: 108299,
     image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&h=500&fit=crop',
     category: 'Electronics',
     stock: 20,
@@ -26,7 +26,7 @@ const sampleProducts = [
   {
     name: 'Wireless Mouse',
     description: 'Ergonomic wireless mouse with precision tracking and long battery life. Compatible with all major operating systems.',
-    price: 29.99,
+    price: 2499,
     image: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=500&fit=crop',
     category: 'Electronics',
     stock: 100,
@@ -34,7 +34,7 @@ const sampleProducts = [
   {
     name: 'Classic Cotton T-Shirt',
     description: 'Premium 100% cotton t-shirt with comfortable fit. Available in multiple colors. Perfect for everyday wear.',
-    price: 24.99,
+    price: 2099,
     image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop',
     category: 'Clothing',
     stock: 150,
@@ -42,7 +42,7 @@ const sampleProducts = [
   {
     name: 'Running Shoes',
     description: 'Lightweight running shoes with advanced cushioning technology. Breathable mesh upper and durable rubber sole.',
-    price: 89.99,
+    price: 7499,
     image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop',
     category: 'Clothing',
     stock: 75,
@@ -50,7 +50,7 @@ const sampleProducts = [
   {
     name: 'Denim Jacket',
     description: 'Classic denim jacket with modern fit. Made from premium denim fabric. A timeless wardrobe essential.',
-    price: 79.99,
+    price: 6699,
     image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=500&fit=crop',
     category: 'Clothing',
     stock: 50,
@@ -58,7 +58,7 @@ const sampleProducts = [
   {
     name: 'The Art of Programming',
     description: 'Comprehensive guide to modern programming practices. Includes real-world examples and best practices.',
-    price: 39.99,
+    price: 3329,
     image: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?w=500&h=500&fit=crop',
     category: 'Books',
     stock: 60,
@@ -66,7 +66,7 @@ const sampleProducts = [
   {
     name: 'Cooking Essentials',
     description: 'Master the basics of cooking with this comprehensive guide. Includes recipes and techniques for beginners.',
-    price: 29.99,
+    price: 2499,
     image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&h=500&fit=crop',
     category: 'Books',
     stock: 40,
@@ -74,7 +74,7 @@ const sampleProducts = [
   {
     name: 'Stainless Steel Water Bottle',
     description: 'Insulated water bottle keeps drinks cold for 24 hours or hot for 12 hours. BPA-free and leak-proof design.',
-    price: 34.99,
+    price: 2915,
     image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&h=500&fit=crop',
     category: 'Home & Kitchen',
     stock: 80,
@@ -82,7 +82,7 @@ const sampleProducts = [
   {
     name: 'Coffee Maker Deluxe',
     description: 'Programmable coffee maker with 12-cup capacity. Brew strength control and auto-shutoff feature.',
-    price: 79.99,
+    price: 6669,
     image: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=500&h=500&fit=crop',
     category: 'Home & Kitchen',
     stock: 35,
@@ -90,7 +90,7 @@ const sampleProducts = [
   {
     name: 'Yoga Mat Premium',
     description: 'Extra-thick yoga mat with superior grip and cushioning. Non-slip surface and eco-friendly materials.',
-    price: 49.99,
+    price: 4165,
     image: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500&h=500&fit=crop',
     category: 'Sports',
     stock: 65,

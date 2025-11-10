@@ -70,12 +70,15 @@ const Cart = () => {
               <div className="border-t-2 border-gray-200 pt-4 flex justify-between items-center">
                 <span className="text-xl font-bold">Total:</span>
                 <span className="text-3xl font-bold text-primary-600">
-                  ${getCartTotal().toFixed(2)}
+                  ₹{getCartTotal().toLocaleString('en-IN')}
                 </span>
               </div>
             </div>
             
-            <button className="w-full py-4 bg-green-500 hover:bg-green-600 text-white rounded-lg font-bold text-lg mb-4 transition">
+            <button 
+              onClick={() => navigate('/checkout')}
+              className="w-full py-4 bg-green-500 hover:bg-green-600 text-white rounded-lg font-bold text-lg mb-4 transition"
+            >
               Proceed to Checkout
             </button>
             

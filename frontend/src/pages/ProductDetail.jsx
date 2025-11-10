@@ -95,7 +95,7 @@ const ProductDetail = () => {
             {product.category}
           </span>
           <h1 className="text-4xl font-bold text-gray-900">{product.name}</h1>
-          <p className="text-4xl font-bold text-primary-600">${product.price.toFixed(2)}</p>
+          <p className="text-4xl font-bold text-primary-600">₹{product.price.toLocaleString('en-IN')}</p>
           <p className="text-gray-600 text-lg leading-relaxed">{product.description}</p>
           
           <div className="p-4 rounded-lg bg-green-50">

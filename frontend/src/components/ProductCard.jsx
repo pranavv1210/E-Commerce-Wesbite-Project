@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
             {product.name}
           </h3>
           <p className="text-2xl font-bold text-primary-600 mb-2">
-            ${product.price.toFixed(2)}
+            ₹{product.price.toLocaleString('en-IN')}
           </p>
           <p className="text-sm text-gray-600">
             {product.stock > 0 ? (

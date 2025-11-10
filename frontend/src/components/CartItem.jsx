@@ -26,7 +26,7 @@ const CartItem = ({ item }) => {
       />
       <div className="flex-1 text-center sm:text-left">
         <h3 className="text-xl font-semibold text-gray-900 mb-1">{item.name}</h3>
-        <p className="text-gray-600">${item.price.toFixed(2)} each</p>
+        <p className="text-gray-600">₹{item.price.toLocaleString('en-IN')} each</p>
       </div>
       <div className="flex flex-col items-center sm:items-end gap-3">
         <div className="flex items-center gap-3">
@@ -46,7 +46,7 @@ const CartItem = ({ item }) => {
           </button>
         </div>
         <p className="text-lg font-bold text-primary-600">
-          ${(item.price * item.quantity).toFixed(2)}
+          ₹{(item.price * item.quantity).toLocaleString('en-IN')}
         </p>
         <button 
           onClick={handleRemove}
