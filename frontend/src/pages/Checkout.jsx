@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
 
 const Checkout = () => {
   const navigate = useNavigate();
   const { items, getCartTotal, clearCart, loading } = useCart();
+  const { isAuthenticated, user } = useAuth();
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -17,6 +19,13 @@ const Checkout = () => {
     zipCode: '',
     country: '',
   });
+
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/login');
+    }
+  }, [isAuthenticated, navigate]);
 
   const handleChange = (e) => {
     setFormData({
