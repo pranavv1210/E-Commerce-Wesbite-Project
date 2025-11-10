@@ -1,0 +1,263 @@
+# Prompts Used for Code Generation
+
+## Project Prompt
+```
+You are an expert full-stack developer. Act as my coding partner and build a **complete E-Commerce website project** for the Diligent internship challenge.
+
+The project should be clean, modular, and production-ready, working end-to-end with all API routes functional.
+
+### Objective
+Create an E-Commerce website that allows users to:
+- Browse products
+- View product details
+- Add / Remove products from a shopping cart
+- Update quantities in cart
+- Display total amount
+- Basic responsive UI
+
+### Tech Stack (mandatory)
+Frontend:
+- React.js (use Vite for setup)
+- React Router for navigation
+- Context API / useReducer for cart state
+- TailwindCSS for styling
+
+Backend:
+- Node.js + Express.js
+- MongoDB Atlas (Mongoose ORM)
+
+Database:
+- MongoDB Atlas cloud database
+- Use sample "products" collection (title, description, price, imageURL, category, stock)
+
+### Functional Requirements
+Backend (in `/backend`):
+- /api/products → GET all products
+- /api/products/:id → GET single product by ID
+- /api/cart → POST (add item), PUT (update quantity), DELETE (remove)
+- /api/cart → GET current cart items (for persistence)
+- Connect to MongoDB Atlas using environment variables in .env
+- Include server.js entry point with Express routes configured
+
+Frontend (in `/frontend`):
+- Pages: Home.jsx, ProductDetails.jsx, Cart.jsx
+- Components: Navbar, ProductCard, CartItem, Footer
+- Routing: /, /product/:id, /cart
+- State Management: Use Context API for cart logic (add/remove/update)
+- API Integration: Use axios to communicate with backend routes
+
+### Deliverables
+1. /frontend – Full React app with working navigation and state
+2. /backend – Full Express backend with all API routes functional
+3. /docs/technical-architecture.md – Folder structure, API endpoints, data flow, state management
+4. /docs/prompts-used.txt – List of all Copilot prompts used
+5. /README.md – Setup and run instructions for both frontend and backend
+
+### Constraints
+- Should run locally with: npm run dev (frontend), npm start (backend)
+- Clean code and folder structure
+- Fully functional cart and product pages
+- Use sample data if needed
+- Complete this within 25–40 minutes
+```
+
+## Architecture Design Prompt
+```
+Design a technical architecture for an e-commerce website with:
+- Clear separation of frontend (React + Vite) and backend (Express + MongoDB)
+- RESTful API design for product operations
+- Context API for cart state management
+- Responsive component structure
+- Modular folder organization
+- Data flow documentation
+```
+
+## Backend Development Prompts
+
+### 1. Express Server Setup
+```
+Create an Express.js server with:
+- CORS enabled for frontend communication
+- JSON body parser middleware
+- MongoDB connection via Mongoose
+- Product routes mounted at /api/products
+- Error handling middleware
+- Server listening on PORT from environment variables
+```
+
+### 2. MongoDB Product Model
+```
+Create a Mongoose schema for Product with fields:
+- name (String, required)
+- description (String, required)
+- price (Number, required)
+- image (String URL, required)
+- category (String, required)
+- stock (Number, default 0)
+- timestamps (createdAt, updatedAt)
+```
+
+### 3. Product API Routes
+```
+Create Express routes for:
+- GET /api/products - fetch all products
+- GET /api/products/:id - fetch single product by ID
+- POST /api/products/seed - seed database with sample data
+Include error handling and appropriate status codes
+```
+
+### 4. Seed Data
+```
+Create seed data with 10+ diverse products across categories:
+- Electronics (laptops, headphones, smartphones)
+- Clothing (shirts, shoes, accessories)
+- Books (fiction, non-fiction)
+- Home & Kitchen items
+Include realistic prices, descriptions, and placeholder images
+```
+
+## Frontend Development Prompts
+
+### 1. Vite React Setup
+```
+Initialize React app with Vite including:
+- React Router DOM for navigation
+- Clean project structure (components, pages, context folders)
+- Global CSS with responsive design
+- Main entry point configuration
+```
+
+### 2. Cart Context
+```
+Create CartContext with React Context API providing:
+- State: cart items array, total price, item count
+- Actions: addToCart, removeFromCart, updateQuantity, clearCart
+- Persist cart to localStorage
+- Calculate totals automatically
+```
+
+### 3. Home Page Component
+```
+Create Home page component that:
+- Fetches products from backend API on mount
+- Displays products in responsive grid layout
+- Shows loading state during fetch
+- Handles errors gracefully
+- Uses ProductCard component for each product
+```
+
+### 4. Product Detail Page
+```
+Create ProductDetail page that:
+- Fetches single product by ID from URL params
+- Displays full product information
+- Includes quantity selector
+- Has "Add to Cart" button
+- Handles product not found scenario
+```
+
+### 5. Cart Page Component
+```
+Create Cart page that:
+- Displays all cart items using CartItem component
+- Shows total price calculation
+- Allows quantity updates (+ and - buttons)
+- Includes remove item functionality
+- Shows empty cart message when no items
+```
+
+### 6. Navbar Component
+```
+Create Navbar component with:
+- Brand/logo
+- Navigation links (Home, Cart)
+- Cart item count badge
+- Responsive design for mobile
+- Sticky positioning
+```
+
+### 7. ProductCard Component
+```
+Create reusable ProductCard component showing:
+- Product image
+- Product name
+- Price formatted as currency
+- Category badge
+- Link to product detail page
+- Hover effects
+```
+
+### 8. CartItem Component
+```
+Create CartItem component for cart display with:
+- Product image and name
+- Price per unit
+- Quantity controls (increment/decrement)
+- Remove button
+- Subtotal calculation
+- Responsive layout
+```
+
+## Styling Prompts
+
+```
+Create responsive CSS with:
+- Mobile-first approach
+- Flexbox/Grid layouts
+- Color scheme (primary, secondary, accent colors)
+- Card designs with shadows and hover effects
+- Button styles (primary, secondary, danger)
+- Form input styling
+- Responsive breakpoints (mobile, tablet, desktop)
+- Smooth transitions and animations
+```
+
+## Configuration Prompts
+
+### 1. Environment Variables
+```
+Create .env.example files for:
+- Backend: MONGODB_URI, PORT
+- Frontend: VITE_API_URL (if needed)
+Include clear placeholder comments
+```
+
+### 2. Package.json Files
+```
+Configure package.json with:
+- Appropriate scripts (dev, start, build)
+- Minimal required dependencies
+- Correct version ranges
+- Project metadata
+```
+
+## Integration & Testing Prompts
+
+```
+Ensure integration:
+- Frontend correctly calls backend API endpoints
+- CORS configured properly
+- Error handling on both client and server
+- Loading states in UI
+- Cart persistence across page refreshes
+- Responsive design tested on multiple screen sizes
+```
+
+## Documentation Prompts
+
+```
+Document:
+- How to set up MongoDB Atlas
+- How to install dependencies
+- How to run backend and frontend
+- How to seed the database
+- Project structure explanation
+- API endpoint documentation
+- Component hierarchy
+- State management flow
+```
+
+---
+
+Generated: November 10, 2025
+Project: E-Commerce Website (React + Express + MongoDB)
