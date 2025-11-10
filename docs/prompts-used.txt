@@ -2,7 +2,7 @@
 
 ## Project Prompt
 ```
-You are an expert full-stack developer. Act as my coding partner and build a **complete E-Commerce website project** for the Diligent internship challenge.
+You are an expert full-stack developer. Act as my coding partner and build a **complete E-Commerce website project**.
 
 The project should be clean, modular, and production-ready, working end-to-end with all API routes functional.
 
@@ -15,7 +15,7 @@ Create an E-Commerce website that allows users to:
 - Display total amount
 - Basic responsive UI
 
-### Tech Stack (mandatory)
+### Tech Stack
 Frontend:
 - React.js (use Vite for setup)
 - React Router for navigation
@@ -24,7 +24,7 @@ Frontend:
 
 Backend:
 - Node.js + Express.js
-- MongoDB Atlas (Mongoose ORM)
+- MongoDB Atlas
 
 Database:
 - MongoDB Atlas cloud database
